@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+}
+.green {
+  background-color: yellowgreen;
+}
+.orange {
+  background-color: orange;
+}
+.grey {
+  background-color: lightgray;
+}
+
+
+
+/* 
+.main-sidebar-inside {
+  width: 208px;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+
+}
+.create-menu-dropdown-parent, body.sidebar-true .main-sidebar .search-menu-dropdown-parent {
+  padding: 0 1rem;
+  padding-top: 0px;
+  padding-right: 1rem;
+  padding-bottom: 0px;
+  padding-left: 1rem;
+  position: relative;
+}
+.create-button {
+  background-color: black;
+  line-height: 1;
+  font-weight: bold;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  outline: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.5rem 0 0;
+  text-align: left;
+  font-size: 1.2rem;
+  border: none;
+  margin-right: 0;
+  position: relative;
+  background: none;
+  color: white;
+  border: 0;
+}
+
+.create-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: auto;
+  z-index: -1;
+  border-radius: 3px;
+  background: inherit;
+  -webkit-transition: background-color .3s linear;
+  transition: background-color .3s linear;
+}
+.create-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: -webkit-gradient(linear, left top, right top, from(#0ebeff), color-stop(#ffdd40), color-stop(#ae63e4), color-stop(#47cf73), color-stop(#0ebeff), color-stop(#ffdd40), color-stop(#ae63e4), to(#47cf73));
+  background: linear-gradient(90deg, #0ebeff, #ffdd40, #ae63e4, #47cf73, #0ebeff, #ffdd40, #ae63e4, #47cf73);
+  background-size: 200% 200%;
+  z-index: -2;
+  border-radius: 4px;
+} */
+
+button {
+  border:none;
+  width: 200px;
+  height: 100px;
+  position: relative;
+  background: transparent;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#0ebeff), color-stop(#ffdd40), color-stop(#ae63e4), color-stop(#47cf73), color-stop(#0ebeff), color-stop(#ffdd40), color-stop(#ae63e4), to(#47cf73));
+  background: linear-gradient(90deg, #0ebeff, #ffdd40, #ae63e4, #47cf73, #0ebeff, #ffdd40, #ae63e4, #47cf73);
+  background-size: 200% 200%;
+  z-index: -2;
+  border-radius: 4px;
+  transition: background-color .3s linear;
+  animation: iris 1s linear infinite;
+}
+button::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 95%;
+  height: 90%;
+  background: black;
+  z-index: -2;
+  border-radius: 4px;
+}
+@keyframes iris {
+  from {
+    background-size: 200% 300%;
+  }
+  to {
+    background-size: 100% 300%;
+  }
+}
+/* ------------------------------------------------------------------------------------ */
+body {
+  overflow-x: hidden;
+}
+.nav {
+  height: 150px;
+  background-color: plum;
+}
+.section-1 {
+  background-color: purple;
+  height: 500px;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: -10%;
+  right: -25%;
+  height: 120%;
+  width: 60%;
+  transform: skewX(15deg);
+  background-color: palevioletred;
+  z-index: 1;
+}
+.img-overlay {
+  position: absolute;
+  top: 0%;
+  right: 20%;
+  height: 100%;
+  width: 30%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-overlay img {
+  height:80%;
+}
+.section-2 {
+  height: 500px;
+  background: #47cf73;
+}
+.div {
+  width: 100px;
+  height: 100px;
+  background: yellowgreen;
+  -webkit-mask-image: url(https://cdn-images-1.medium.com/max/800/1*seN92pKSjD8jIe4xycIGFw.png);
+  -webkit-mask-size: 100% 100%;
+}
+@media (max-width:600px) {
+  main {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+  }
+  .section-1 {
+    height: 90vh;
+  }
+  .overlay {
+    top: -5%;
+    right: -25%;
+    height: 110%;
+    width: 47%;
+  }
+  .img-overlay  {
+    right: 0%;
+    width: 100%;
+  }
+  
+ 
+}
